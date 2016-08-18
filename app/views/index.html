@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shopping Bag</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+        {% block css %}
+        <link rel="stylesheet" href="/css/main.css">
+        {% endblock %}
+    </head>
+
+    <body>
+        <main class="main-container">
+            <header>
+                <section>
+                    <h1 class="cart-heading">
+                        YOUR SHOPPING BAG
+                    </h1>
+                    <div class="cart-mobile-heading-section clearfix">
+                        <h1 class="shift-left">YOUR SHOPPING BAG</h1>
+                        <div class="cart-items shift-right">{{data|length}} ITEM{{'S' if(data|length > 1) else  ''}}</div>
+                    </div>
+                </section>
+            </header>
+            <div class="sub-pages">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+            <footer></footer>
+        </main>
+        {% block js %}
+        <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="/js/modal.js"></script>
+        <script src="/js/cart.js"></script>
+        {% endblock %}
+    </body>
+
+</html>

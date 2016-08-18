@@ -1,0 +1,107 @@
+@media (min-width: 768px) {
+  .cart-mobile-heading-section {
+    display: none;
+  }
+
+  .cart-mobile-action {
+    display:none;
+  }
+
+  .cart-mobile-price-qty {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cart-mobile-heading-section {
+    display: block;
+  }
+
+  .cart-item-grid {
+    padding: 8px 0px;
+    border-bottom: 1px solid #c7c7c7;
+  }
+
+  .cart-mobile-action {
+    display:block;
+    width: 216px;
+    margin: 0px auto;
+  }
+
+  .cart-mobile-price-qty {
+    display: block;
+  }
+
+  .cart-heading,.cart-header,.cart-action,.cart-size,.cart-qty,.cart-price,.support {
+    display: none;
+  }
+  .cart-coupon-total .cart-discount-section {
+    width: 300px;
+    float: none;
+    margin: 0px auto;
+    text-align: center;
+  }
+
+  .cart-item {
+    .cart-item-details {
+      height: 170px;
+    }
+    .cart-item-image {
+      width: 130px;
+      height: 130px;
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      margin-right: 10px;
+      padding: 4px;
+    }
+  }
+
+
+  .cart-coupon-total {
+    margin-top: 20px;
+
+    .coupon-apply-heading {
+      float: none;
+      margin: 0px auto;
+      margin-bottom: 10px;
+    }
+
+    .cart-discount-section {
+      float:none;
+      width: auto;
+      text-align: center;
+
+      .cart-apply-coupon {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #c7c7c7;
+      }
+
+      .cart-total-offer {
+        padding: 20px 20px;
+
+        .cart-total-heading {
+          width: 200px;
+          text-align: left;
+        }
+      }
+
+      .cart-con-shopping {
+        width: 232px;
+        margin: 14px auto;
+      }
+
+      .secure-alert-msg {
+        text-align: center;
+      }
+    }
+
+    .coupon-apply-form {
+      margin:0px auto;
+      width: 300px;
+      float: none;
+    }
+  }
+
+}

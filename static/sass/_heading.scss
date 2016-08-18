@@ -1,0 +1,78 @@
+.logo-heading {
+  font-size: 3.125em;
+  font-weight: 300;
+  color: $logo-color;
+}
+
+.cart-header-heading {
+  font-size: 0.875em;
+  font-weight: 400;
+  color: $logo-color;
+}
+
+.cart-product-title-heading {
+  font-size: 0.875em;
+  font-weight: 500;
+  color: $logo-color;
+  text-transform: uppercase;
+}
+
+.cart-sub-heading {
+  font-size: 0.75em;
+  font-weight: 300;
+  color: $logo-color;
+}
+
+.cart-action-heading {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: $logo-color;
+}
+
+.cart-checkout-heading {
+  font-size: 0.75em;
+  font-weight: 400;
+  color: $white;
+}
+
+.cart-variation-color-heading {
+  color: $cart-variation-color;
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+.cart-currency-prefix-heading {
+  font-size: 0.625em;
+  color: $cart-variation-color;
+  font-weight: 400;
+}
+
+.cart-currency-mrp-prefix-heading {
+  font-size: 0.625em;
+  color: $strip-color;
+  font-weight: 400;
+}
+
+.cart-currency-mrp-heading {
+  font-size: 1em;
+  color: $strip-color;
+  font-weight: 400;
+}
+
+.cart-item-price-heading {
+  font-size: 1em;
+  color: $cart-variation-color;
+  font-weight: 400;
+}
+
+.estimated-heading {
+  color: $grey;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.mobile-app-main-heading {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #636363;
+}

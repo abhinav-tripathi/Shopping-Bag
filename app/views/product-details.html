@@ -1,0 +1,40 @@
+<div class="product-detail clearfix">
+    <div class="shift-left product-desc">
+        <div class="seperator"></div>
+        <div class="product-title center-content">
+            {{data.p_name}}
+        </div>
+        <div class="product-price">
+            <span class="currency-icon">&#36;</span>
+            <span class="price">{{data.p_price}}</span>
+        </div>
+        <div class="product-variation clearfix">
+            <select name="" class="color">
+                <option value="">COLOR</option>
+                {% for color in data.p_available_options.colors%}
+                <option value="{{color.hexcode}}">{{color.name}}</option>
+                {% endfor %}
+            </select>
+            <select name="" class="size">                <option value="">SIZE</option>
+                {% for size in data.p_available_options.sizes%}
+                <option value="{{size.code}}" }>{{size.name}}</option>
+                {% endfor %}
+            </select>
+            <select name="" class="qty">
+                <option value="">QTY</option>
+                {% for qty in data.p_available_options.qty%}
+                <option value="{{qty}}" >{{qty}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="checkout">
+            <a href="/" product-id="{{data.p_id}}" id="update_cart">EDIT</a>
+        </div>
+        <div class="center-content see-more">
+            <a href="/">See product details</a>
+        </div>
+    </div>
+    <div class="product-image">
+        <img src="/images/{{data.img_url}}" alt="">
+    </div>
+</div>

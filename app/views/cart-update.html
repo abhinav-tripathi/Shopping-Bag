@@ -1,0 +1,164 @@
+<section class="cart-header clearfix">
+    <div class="header cart-item shift-left">{{data|length}} ITEM{{'S' if(data|length > 1) else  ''}}</div>
+    <div class="header cart-size shift-left">SIZE</div>
+    <div class="header cart-qty shift-left">QTY</div>
+    <div class="header cart-price shift-left">PRICE</div>
+</section>
+<section class="cart-items">
+    {% for cartItem in data %}
+    <div class="cart-item-grid clearfix">
+        <div class="item cart-item shift-left clearfix">
+            <div class="cart-item-image shift-left">
+                <img src="/images/{{cartItem.img_url}}" alt="">
+            </div>
+            <div class="cart-item-details shift-left">
+                <div class="cart-item-title">
+                    {{cartItem.p_name}}
+                </div>
+                <div class="cart-sub-desc">Style #: {{cartItem.p_style}}</div>
+                <div class="cart-sub-desc">Color: {{cartItem.p_selected_color.name}}</div>
+
+                <div class="cart-mobile-price-qty clearfix">
+                    <div class="quantity">
+                        <span class="qty">QTY:</span>
+                        <span class="count">{{cartItem.p_quantity}}</span>
+                    </div>
+                    <div class="currency-price">
+                        <span class="currency-icon">&#36;</span>
+                        <span class="price">{{cartItem.p_price}}</span>
+                    </div>
+                </div>
+
+                <div class="cart-action" product-id="{{cartItem.p_id}}">
+                    <ul class="clearfix">
+                        <li><span class="edit-item">EDIT</span></li>
+                        <li><span class="remove-item">X REMOVE</span></li>
+                        <li><span class="save-item">SAVE FOR LATER</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="item cart-size shift-left">{{cartItem.p_selected_size.code}}</div>
+        <div class="item cart-qty shift-left">
+            <span>{{cartItem.p_quantity}}</span>
+        </div>
+        <div class="item cart-price shift-left clearfix">
+            <div class="mrp">
+                <span class="currency-icon">&#36;</span>
+                <span class="cart-item-total">{{cartItem.p_quantity*cartItem.p_originalprice}}</span>
+            </div>
+            <div class="selling-price">
+                <span class="currency-icon">&#36;</span>
+                <span class="cart-item-total">{{cartItem.p_price}}</span>
+            </div>
+
+        </div>
+
+        <div class="cart-mobile-action clearfix">
+            <ul>
+                <li><span class="edit-item">EDIT</span></li>
+                <li><span class="remove-item">X REMOVE</span></li>
+                <li><span class="save-item">SAVE FOR LATER</span></li>
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+<section class="cart-coupon-total clearfix">
+    <div class="support shift-left">
+        <div class="need-help">
+            Need help or have a question ?
+        </div>
+        <ul>
+            <li>
+                <div>Call Customer Service at</div>
+                <div>1-800-555-5555</div>
+            </li>
+            <li>
+                <div>Chat with one of</div>
+                <div>our stylist</div>
+            </li>
+            <li>
+                <div>See return</div>
+                <div>& exchange policy</div>
+            </li>
+        </ul>
+    </div>
+    <div class="cart-discount-section shift-right">
+        <div class="cart-apply-coupon clearfix">
+            <div class="shift-left coupon-apply-heading">Enter promotion or gift card</div>
+            <div class="shift-right coupon-apply-form clearfix">
+                <form action="">
+                    <div class="coupon-lable shift-left">
+                        <input type="text" id="coupon">
+                    </div>
+                    <div class="coupon-btn shift-left">
+                        <input type="button" value="APPLY" id="applyCoupon">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="cart-total-offer clearfix">
+            <div class="cart-total-heading shift-left">SUBTOTAL</div>
+            <div class="shift-right">
+                <span class="currency-icon">&#36;</span>
+                <span class="cart-amount">{{subTotal}}</span>
+            </div>
+        </div>
+
+        <div class="cart-total-offer clearfix">
+            <div class="cart-total-heading shift-left">Promotional code JF10 APPLIED</div>
+            <div class="shift-right">
+                <span class="currency-icon">&#36;</span>
+                <span class="cart-amount">{{'-' if (estimatedPrice.discount > 0) else ''}}{{estimatedPrice.discount}}</span>
+            </div>
+        </div>
+
+        <div class="cart-total-offer clearfix">
+            <div class="cart-total-heading shift-left">
+                Estimated shipping*
+                <div class="sub-heading">
+                    You qualify for free shipping because your order is over &#36;50*
+                </div>
+            </div>
+            <div class="shift-right">
+                <span class="shipping-free">FREE</span>
+            </div>
+        </div>
+
+        <div class="cart-total-offer estimated-total clearfix thick-border-bottom4 padding-bottom16">
+            <div class="cart-total-heading shift-left">
+                Estimated Total
+                <div class="sub-heading">
+                    Tax will be applied during checkout
+                </div>
+            </div>
+            <div class=" shift-right">
+                <span class="currency-icon">&#36;</span>
+                <span class="cart-amount">{{estimatedPrice.amount}}</span>
+            </div>
+        </div>
+
+
+        <div class="cart-con-shopping clearfix">
+            <div class="checkout shift-right">
+                <a href="/">Checkout</a>
+            </div>
+            <div class="continue-shopping shift-right">
+                <a href="/">Continue Shopping</a>
+            </div>
+        </div>
+
+        <div class="secure-alert-msg right-content">
+            <span><img src="/images/lock.jpg" alt=""></span>
+            Secure checkout. Shopping is always safe & secure
+        </div>
+
+
+    </div>
+</section>
+<div class="pd"></div>
